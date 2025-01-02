@@ -9,7 +9,6 @@ E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\CourseManageme
 E:\manthan\CourseManagement\CourseManagementTest\bin\Debug\net8.0\appsettings.Development.json
 E:\manthan\CourseManagement\CourseManagementTest\bin\Debug\net8.0\appsettings.json
 E:\manthan\CourseManagement\CourseManagementTest\bin\Debug\net8.0\CourseManagementTest.staticwebassets.runtime.json
-E:\manthan\CourseManagement\CourseManagementTest\bin\Debug\net8.0\CourseManagementTest.staticwebassets.endpoints.json
 E:\manthan\CourseManagement\CourseManagementTest\bin\Debug\net8.0\CourseManagementTest.exe
 E:\manthan\CourseManagement\CourseManagementTest\bin\Debug\net8.0\CourseManagementTest.deps.json
 E:\manthan\CourseManagement\CourseManagementTest\bin\Debug\net8.0\CourseManagementTest.runtimeconfig.json
@@ -165,9 +164,7 @@ E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\scopedcss\bund
 E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\scopedcss\projectbundle\CourseManagementTest.bundle.scp.css
 E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets.build.json
 E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets.development.json
-E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets\msbuild.CourseManagementTest.Microsoft.AspNetCore.StaticWebAssets.props
-E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets\msbuild.CourseManagementTest.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets\msbuild.build.CourseManagementTest.props
 E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CourseManagementTest.props
 E:\manthan\CourseManagement\CourseManagementTest\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CourseManagementTest.props
