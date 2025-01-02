@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CourseManagementTest.Models.Student>
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h2>Students</h2>
+
+<p>
+    <a href="@Url.Action("CreateOrEdit", "Student")" class="btn btn-primary">Create New Student</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>DOB</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Address</td>
+                <td>@student.DOB.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a href="@Url.Action("CreateOrEdit", "Student", new { id = student.StudentId })" class="btn btn-info">Edit</a>
+
+                    <a href="@Url.Action("Details", "Student", new { id = student.StudentId })" class="btn btn-success">Details</a>
+
+                    <a href="@Url.Action("Delete", "Student", new { id = student.StudentId })" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this student?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

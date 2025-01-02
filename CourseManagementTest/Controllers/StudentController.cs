@@ -21,7 +21,6 @@ namespace CourseManagementTest.Controllers
 
         public async Task<IActionResult> CreateOrEdit(int? id)
         {
-
             Student student;
             if (id == null)
             {
@@ -30,31 +29,54 @@ namespace CourseManagementTest.Controllers
             else
             {
                 student = await _context.Students.FindAsync(id);
+                if (student == null)
+                {
+                    return NotFound();
+                }
             }
 
-            if (student == null && id.HasValue)
-            {
-                return NotFound();
-            }
             return View(student);
         }
+
         [HttpPost]
-        public async Task<IActionResult> CreateOrEdit(int id, [Bind("StudentId,Name,Email,Address,DOB")] Student student)
+        public async Task<IActionResult> CreateOrEdit(int? id, [Bind("StudentId,Name,Email,Address,DOB")] Student student)
         {
             if (ModelState.IsValid)
             {
-                if (id == 0)
+                if (id == null)
                 {
-                    _context.Add(student);
+                    _context.Students.Add(student);
                 }
                 else
                 {
-                    _context.Update(student);
+                    var existingStudent = await _context.Students.FindAsync(id);
+
+                    if (existingStudent != null)
+                    {
+                        existingStudent.Name = student.Name;
+                        existingStudent.Email = student.Email;
+                        existingStudent.Address = student.Address;
+                        existingStudent.DOB = student.DOB;
+
+                        _context.Students.Update(existingStudent);
+                    }
                 }
 
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            return View(student);
+        }
+        public async Task<IActionResult> Details(int id)
+        {
+            var student = await _context.Students
+                .FirstOrDefaultAsync(m => m.StudentId == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+
             return View(student);
         }
 
